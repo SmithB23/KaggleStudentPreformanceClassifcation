@@ -59,7 +59,7 @@ After splitting up the session_id column the shape is (424116, 4)
 
 First we will look and understand the original training dataset. This is a classification, we will be using a random forest classification algorithm for this problem
 
-# **Data visulaization within the coding segmant**
+# **Data visulaization**
 
  **Train Dataset*
 For the numerical values, before getting rid of outliers we can see that there are some obvious ones, however, we can seesome normal graphs as well
