@@ -59,4 +59,24 @@ After splitting up the session_id column the shape is (424116, 4)
 
 First we will look and understand the original training dataset. This is a classification, we will be using a random forest classification algorithm for this problem
 
+# **Data visulaization within the coding segmant**
 
+ **Train Dataset*
+For the numerical values, before getting rid of outliers we can see that there are some obvious ones, however, we can seesome normal graphs as well
+For the categorical values we can see there are high levels of class imbalance
+
+**Train_Labels Dataset**
+We can also see some high levels of class imbalance as there were much more correct answers than wrong.
+
+## **Problem Formulation**
+
+## **Training**
+
+## **Performance Comparison**
+
+## **Future Work**
+
+# **How to Reproduce**
+I personally wouldnt want to reproduce this
+
+It was all done in one file
