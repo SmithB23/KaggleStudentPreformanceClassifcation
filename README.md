@@ -30,16 +30,26 @@ train dataset: There were originally over 26 million rows but I lowered the amou
 
 Removed columns: Due to missing values: 'page', 'hover_duration', 'text', 'fqid', 'text_fqid' Due to my arbitrary reasoning (not being useful to the problem): 'index', 'fullscreen', 'hq', 'music'
 
-Remaining Columns: 'session_id'- numerical(int64), 0 missing value ,the actual range of values not relevant 'elasped_time'- numerical(int32), 0 missing values, range is 1988601973 in milliseconds 'event_name'- categorical, 0 missing values 'name'- categorical, 0 missing values 'level'- numerical(uint8), 0 missing values, range is 22 'room_coor_x'- numerical(float32), 788253 missing values, range is 3249.56787109375 'room_coor_y'- numerical(float32), 788253 missing values, range is 1461.77880859375 'screen_coor_x'- numerical(float32), 788253 missing values, range is 1919.0 'screen_coor_y'- numerical(float32), 788253 missing values, range is 1919.0 'room_fqid'- categorical, 0 missing values 'level_group'- categorical, 0 missing values
+Remaining Columns: 
+* 'session_id'- numerical(int64), 0 missing value ,the actual range of values not relevant
+* 'elasped_time'- numerical(int32), 0 missing values, range is 1988601973 in milliseconds
+* 'event_name'- categorical, 0 missing values 'name'- categorical, 0 missing values
+* 'level'- numerical(uint8), 0 missing values, range is 22
+* 'room_coor_x'- numerical(float32), 788253 missing values, range is 3249.56787109375
+* 'room_coor_y'- numerical(float32), 788253 missing values, range is 1461.77880859375
+* 'screen_coor_x'- numerical(float32), 788253 missing values, range is 1919.0
+* 'screen_coor_y'- numerical(float32), 788253 missing values, range is 1919.0
+* 'room_fqid'- categorical, 0 missing values
+* 'level_group'- categorical, 0 missing values
 
 Points to discuss: Class imbalances: Most categorical values have a significant imbalance between the categories
 
 Missing values: As you can see with the x and y coordinates, based on the game room and screen, the amount of missing values is the same for each column, upon looking at the data set we see a trend. Whenever one of these is missing, so are all the others. This gives us the option of either removing all the null values or replacing all of them with the knowledge that 4 out of 11 columns would be identical for just under 800,000 of 10,000,000 rows. We have enough data to get rid of these rows. We can compare imputing the missing data and getting rid of the values later on.
 
 Outliers: Upon a quick glance we can see their are some obvious outliers within multiple columns
-    elapsed_time
-    screen_coor_x
-    screen_coor_y
+* elapsed_time
+* screen_coor_x
+* screen_coor_y
 We will scale the numerical columns using z-score and get rid of any values with a magnitude greater than 3
 Prior to the removal of outliers, the shape of our dataset is (10000000,11)
 
