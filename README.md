@@ -64,6 +64,8 @@ First we will look and understand the original training dataset. This is a class
  **Train Dataset*
 For the numerical values, before getting rid of outliers we can see that there are some obvious ones, however, we can seesome normal graphs as well
 For the categorical values we can see there are high levels of class imbalance
+![image](https://github.com/user-attachments/assets/ad68eaa3-8200-4ff9-aa1e-dbdcb48ab607)
+
 
 **Train_Labels Dataset**
 We can also see some high levels of class imbalance as there were much more correct answers than wrong.
