@@ -60,7 +60,11 @@ There are no missing values in the dataset
 
 For easier use I s the session_id into session and question This will allow us to look at the specific question for each session Id
 
-Columns: 'session_id'- object 'correct'- categorical, 1 or 0 'session'- numerical, range not super relevant 'q'- numerical, question number, range is 18
+Columns: 
+* 'session_id'- object
+* 'correct'- categorical, 1 or 0
+* 'session'- numerical, range not super relevant
+* 'q'- numerical, question number, range is 18
 
 There is a class imbalance in the correct column (much more correct than incorrect)
 
