@@ -74,6 +74,7 @@ After splitting up the session_id column the shape is (424116, 4)
 
 First we will look and understand the original training dataset. This is a classification, we will be using a random forest classification algorithm for this problem
 
+In regards to feature engineering I used the x and y coordinates from the room and screen to find the standard deviation of these fields
 # **Data visulaization**
 
  **Train Dataset*
@@ -86,6 +87,12 @@ For the categorical values we can see there are high levels of class imbalance
 We can also see some high levels of class imbalance as there were much more correct answers than wrong.
 
 ## **Problem Formulation**
+We will be inputting the cleaned data and determining, related to the session ID and question. In return we will get an output that states the session ID, the question, and whether the user answered the question correctly. In regards to the submission for the competition, we have another column that will include the section of the questions asked. 
+
+In my code the model that I use is the GradientBoostedTree Moodels from Tensorflow. 
+
+With the highest accuracy being an average 70, I will be free to do a decent amount of hypertuning without having to worry about overfitting. We have a complicated dataset that needs a model capable of handling such. Hence the use of a gradient boosted tree model.
+
 
 ## **Training**
 
