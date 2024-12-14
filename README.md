@@ -102,6 +102,8 @@ In regards to time, just loading the dataset was taking a couple minutes, but af
 One way to get around the problem of the train_labels datset was to seperate the session_id and then assign a certian question to the ID. This would result in each session ID having 18 rows from 1 to 18.
 ## **Performance Comparison**
 
+One significant difference that is important to bring up before discussing results is the difference in data. Despite my efforts I was not able to load ad play with the entire datset of 26 million rows. I had to shorten the dataset to 10 million rows which is significant. This needs to be kept in mind when comparing the metrics
+
 Mentioned prevoiuosly, there will be a model for each question. The metrics to be used for each model is accuracy. Once all of the accuracies are calculated, the mean accuracy is what will be used as the main metric of success.
 
 My mean accuracy:
@@ -113,5 +115,5 @@ The only model that was used was the Gradient Bossted Tree Model.
 ## **Future Work**
 In the future, I would do more exploration of the data and potentially experiment with more encoding.
 
-In the future, what I would do that I beleive would have the highest impact, is expermiment with more models. It would be ideal to use mulitple models and compare them rather then basing everything off of one.
+In the future, what I would do that I beleive would have the highest impact, is expermiment with more models. It would be ideal to use mulitple models and compare them rather then basing everything off of one. Specifically I would be interested in finding out how well Random Forest classification does. I could look deeper into the code and play with different ways of feature engineering.
 
