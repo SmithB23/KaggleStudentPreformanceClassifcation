@@ -95,12 +95,23 @@ With the highest accuracy being an average 70, I will be free to do a decent amo
 
 
 ## **Training**
+ For our model, there will be a 80-20 split. What proved to be difficult was the addition of having to seperate the session_id, question, and determining the correctness for each question. My goal was to create a seperate model for each of the questions, meaning we would have 18 different models. Once the hypertuning is finished and we got a good test score and validation score, we could move onto the test dataset. In addition to the training dataset, we have a new column to deal with which is the section level. 
 
+In regards to time, just loading the dataset was taking a couple minutes, but after cleaning this process didn't take a significant amount of time to complete.
+
+One way to get around the problem of the train_labels datset was to seperate the session_id and then assign a certian question to the ID. This would result in each session ID having 18 rows from 1 to 18.
 ## **Performance Comparison**
 
+Mentioned prevoiuosly, there will be a model for each question. The metrics to be used for each model is accuracy. Once all of the accuracies are calculated, the mean accuracy is what will be used as the main metric of success.
+
+My mean accuracy:
+
+Best Kaggle mean accuracy: 75.6%
+
+The only model that was used was the Gradient Bossted Tree Model.
+
 ## **Future Work**
+In the future, I would do more exploration of the data and potentially experiment with more encoding.
 
-# **How to Reproduce**
-I personally wouldnt want to reproduce this
+In the future, what I would do that I beleive would have the highest impact, is expermiment with more models. It would be ideal to use mulitple models and compare them rather then basing everything off of one.
 
-It was all done in one file
